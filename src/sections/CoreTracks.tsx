@@ -3,12 +3,25 @@
 
 import React from "react";
 import Wrapper from "@/shared/Wrapper";
-import CoreTracksLogo from "@/assets/CoreTracksLogo.png";
 import Image from "next/image";
 import { useState } from 'react';
 
+import BRAND from "@/assets/Tracks/BRAND.png";
+import EDITORA from "@/assets/Tracks/EDITORA.png";
+import ESCOLA from "@/assets/Tracks/ESCOLA.png";
+import GRACO from "@/assets/Tracks/GRACO.png";
+import PLAY from "@/assets/Tracks/PLAY.png";
+
 const CoreTracks = () => {
-    const [selectedItem, setSelectedItem] = useState('GRACO');
+    const [selectedItem, setSelectedItem] = useState<keyof typeof images>('GRACO');
+
+    const images = {
+        GRACO: GRACO,
+        ESCOLA: ESCOLA,
+        BRAND: BRAND,
+        EDITORA: EDITORA,
+        PLAY: PLAY,
+    };
 
     const renderContent = () => {
         if (selectedItem === 'GRACO') {
@@ -127,9 +140,10 @@ const CoreTracks = () => {
 
                         <div className="w-3/10 p-4 ml-64">
                             <Image
-                                src={CoreTracksLogo}
-                                alt="CoreTracksLogo"
+                                src={images[selectedItem]}
+                                alt={`${selectedItem} Logo`}
                                 width={300}
+                                height={300}
                             />
                             <ul className="flex flex-col my-6">
                                 {['GRACO', 'ESCOLA', 'EDITORA', 'BRAND', 'PLAY'].map((item) => (
@@ -137,7 +151,7 @@ const CoreTracks = () => {
                                         <div
                                             className={`font-bold my-3 cursor-pointer ${selectedItem === item ? 'text-[#898989]' : ''
                                                 }`}
-                                            onClick={() => setSelectedItem(item)}
+                                            onClick={() => setSelectedItem(item as keyof typeof images)}
                                         >
                                             {item}
                                         </div>

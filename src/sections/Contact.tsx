@@ -33,13 +33,13 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium">
-                                        Telefone
+                                        WhatsApp
                                     </label>
                                     <input
                                         type="tel"
                                         name="phone"
                                         className="mt-1 block w-full px-3 py-2 bg-white border rounded-md focus:outline-none"
-                                        placeholder="Seu telefone"
+                                        placeholder=""
                                     />
                                 </div>
                                 <div>
@@ -50,7 +50,7 @@ const Contact = () => {
                                         type="email"
                                         name="email"
                                         className="mt-1 block w-full px-3 py-2 bg-white border rounded-md focus:outline-none"
-                                        placeholder="Seu email"
+                                        placeholder=""
                                     />
                                 </div>
                                 <div>
@@ -61,7 +61,7 @@ const Contact = () => {
                                         name="message"
                                         rows={4}
                                         className="mt-1 block w-full px-3 py-2 bg-white border rounded-md focus:outline-none"
-                                        placeholder="Sua mensagem"
+                                        placeholder=""
                                     ></textarea>
                                 </div>
                                 <button

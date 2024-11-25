@@ -166,10 +166,10 @@ const CoreTracks = () => {
                     </div>
 
                     <div className="md:hidden min-h-[80vh] flex flex-col">
-                        <div className="p-4 flex flex-col items-center">
+                        <div className="flex flex-col items-center">
                             <ul className="flex flex-row my-6 overflow-x-auto">
                                 {['GRACO', 'ESCOLA', 'EDITORA', 'BRAND', 'PLAY'].map((item) => (
-                                    <li key={item} className="mr-4">
+                                    <li key={item} className="mr-1">
                                         <div
                                             className={`font-bold cursor-pointer ${
                                                 selectedItem === item ? 'text-[#898989]' : ''

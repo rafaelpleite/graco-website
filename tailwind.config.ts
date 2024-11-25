@@ -16,6 +16,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        'h-sm': { 'raw': '(min-width: 999px)' }
+      }
     },
   },
   plugins: [],

@@ -121,7 +121,7 @@ const CoreTracks = () => {
         else if (selectedItem === 'PLAY') {
             return (
                 <>
-                    <p className="text-5xl font-bold text-black mt-8">
+                    <p className="text-7xl font-bold text-black mt-8">
                         Estamos construindo
                         o maior streaming de
                         teologia do Brasil!
@@ -135,10 +135,10 @@ const CoreTracks = () => {
     return (
         <section className="py-8 px-8 text-black">
             <Wrapper>
-                <div className="bg-[#D9D9D9] rounded-xl w-50 h-100">
-                    <div className="flex flex-col md:flex-row items-center">
+                <div className="bg-[#D9D9D9] rounded-xl max-w-screen-lg mx-auto">
+                    <div className="hidden md:flex md:flex-row h-full flex-col">
+                    <div className="w-full md:w-1/3 p-4 flex flex-col items-center">
 
-                        <div className="w-3/10 p-4 ml-64">
                             <Image
                                 src={images[selectedItem]}
                                 alt={`${selectedItem} Logo`}
@@ -159,7 +159,30 @@ const CoreTracks = () => {
                                 ))}
                             </ul>
                         </div>
-                        <div className="w-7/10 p-4 border-l-2 border-[#aaa] gap-y-4 mr-64">
+                        <div className="hidden md:block w-px bg-[#aaa]"></div>
+                        <div className="w-full md:w-2/3 p-4 max-h-[500px] overflow-y-auto">
+                            {renderContent()}
+                        </div>
+                    </div>
+
+                    <div className="md:hidden min-h-[80vh] flex flex-col">
+                        <div className="p-4 flex flex-col items-center">
+                            <ul className="flex flex-row my-6 overflow-x-auto">
+                                {['GRACO', 'ESCOLA', 'EDITORA', 'BRAND', 'PLAY'].map((item) => (
+                                    <li key={item} className="mr-4">
+                                        <div
+                                            className={`font-bold cursor-pointer ${
+                                                selectedItem === item ? 'text-[#898989]' : ''
+                                            }`}
+                                            onClick={() => setSelectedItem(item as keyof typeof images)}
+                                        >
+                                            {item}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="p-4 flex-1 overflow-y-auto">
                             {renderContent()}
                         </div>
                     </div>

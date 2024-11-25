@@ -3,7 +3,7 @@ import Link from "next/link";
 const Header = () => {
     return (
         <header className="fixed top-0 left-0 w-full z-20 backdrop-blur-md flex justify-center items-center">
-            <div className="flex justify-center py-8 items-center">
+            <div className="flex justify-center items-center py-4 sm:py-8">
                 <ul className="flex justify-center items-center gap-x-6 sm:gap-x-16">
                     <li className="relative group cursor-pointer hover:text-sky-200">
                         <div className="flex gap-x-2 items-center">

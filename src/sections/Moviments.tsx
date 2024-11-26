@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Moviments = () => {
     return (
-        <section className="text-black py-8">
+        <section className="text-black py-2 md:py-8">
             <Wrapper>
                 {/* Desktop Version */}
                 <div className="hidden md:block">

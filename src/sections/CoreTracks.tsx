@@ -133,7 +133,7 @@ const CoreTracks = () => {
 
 
     return (
-        <section className="py-8 px-8 text-black">
+        <section className="py-8 text-black px-1 md:px-8">
             <Wrapper>
                 <div className="bg-[#D9D9D9] rounded-xl max-w-screen-lg mx-auto">
                     <div className="hidden md:flex md:flex-row h-full flex-col">

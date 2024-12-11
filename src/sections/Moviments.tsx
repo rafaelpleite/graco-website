@@ -83,8 +83,8 @@ const Moviments = () => {
                                 Junte-se a nós e nos ajude a transformar a vida de milhões de
                                 cristãos por meio da Palavra de Deus.
                             </p>
-                            <p className="text-2xl font-bold text-black mt-8">
-                                #movimentoespalhandoapalavra
+                            <p className="text-2xl text-black mt-8">
+                            <strong>#movimento</strong>espalhandoa<strong>palavra</strong>
                             </p>
                         </div>
                     </div>

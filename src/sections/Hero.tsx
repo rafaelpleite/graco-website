@@ -16,7 +16,7 @@ const Hero = () => {
                             src={HeroMobilePoster}
                             alt="Hero Mobile"
                             fill
-                            className="object-cover"
+                            className="object-contain"
                             priority
                         />
                     </div>

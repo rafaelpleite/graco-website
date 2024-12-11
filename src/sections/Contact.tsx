@@ -16,7 +16,7 @@ const Contact = () => {
                             objectFit="cover"
                         />
                     </div>
-                    <p className="relative text-5xl font-bold text-white py-2 z-10">CONTATE-NOS</p>
+                    <p className="relative text-6xl text-center	font-bold text-white py-16">CONTATE-NOS</p>
                     <div className="relative bg-white rounded-xl w-full h-auto z-10">
                         <div className="flex flex-col md:flex-row items-center">
                             <div className="w-full p-4">
@@ -80,7 +80,7 @@ const Contact = () => {
                 {/* Mobile Version */}
         <div className="block md:hidden">
           {/* Heading */}
-          <p className="text-4xl font-bold text-black py-4 text-center">
+          <p className="text-4xl font-bold text-white py-8 text-center">
             CONTATE-NOS
           </p>
           {/* Form Container */}

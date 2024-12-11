@@ -136,16 +136,16 @@ const CoreTracks = () => {
         <section className="py-8 text-black px-2 md:px-8">
             <Wrapper>
                 <div className="bg-[#D9D9D9] rounded-xl max-w-screen-lg mx-auto">
-                    <div className="hidden md:flex md:flex-row h-full flex-col">
-                    <div className="w-full md:w-1/3 p-4 flex flex-col items-center">
+                    <div className="hidden md:flex md:flex-row h-[600px] flex-col">
+                        <div className="w-full md:w-1/3 p-4 flex flex-col items-center">
 
                             <Image
                                 src={images[selectedItem]}
                                 alt={`${selectedItem} Logo`}
-                                width={300}
-                                height={300}
+                                width={200}
+                                height={200}
                             />
-                            <ul className="flex flex-col my-6">
+                            <ul className="flex flex-col text-xl my-6">
                                 {['GRACO', 'ESCOLA', 'EDITORA', 'BRAND', 'PLAY'].map((item) => (
                                     <li key={item}>
                                         <div
@@ -159,8 +159,8 @@ const CoreTracks = () => {
                                 ))}
                             </ul>
                         </div>
-                        <div className="hidden md:block w-px bg-[#aaa]"></div>
-                        <div className="w-full md:w-2/3 p-4 max-h-[500px] overflow-y-auto">
+                        <div className="hidden md:block w-px h-[90%] bg-[#aaa] self-center"></div>
+                        <div className="w-full md:w-2/3 p-4 overflow-y-auto">
                             {renderContent()}
                         </div>
                     </div>
@@ -169,11 +169,10 @@ const CoreTracks = () => {
                         <div className="flex flex-col items-center">
                             <ul className="flex flex-row my-6 overflow-x-auto">
                                 {['GRACO', 'ESCOLA', 'EDITORA', 'BRAND', 'PLAY'].map((item) => (
-                                    <li key={item} className="mr-1">
+                                    <li key={item} className="mr-4 text-sm">
                                         <div
-                                            className={`font-bold cursor-pointer ${
-                                                selectedItem === item ? 'text-[#898989]' : ''
-                                            }`}
+                                            className={`font-bold cursor-pointer ${selectedItem === item ? 'text-[#898989]' : ''
+                                                }`}
                                             onClick={() => setSelectedItem(item as keyof typeof images)}
                                         >
                                             {item}
